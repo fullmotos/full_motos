@@ -108,6 +108,10 @@
   color:#ccc;
   padding:40px 20px;
 }
+footer a {
+  text-decoration: none;
+  color: var(--negro);
+}
 
 .footer-contenido{
   max-width:1200px;
