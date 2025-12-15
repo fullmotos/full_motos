@@ -101,25 +101,32 @@
       border-radius:10px;
     }
 
+
     /* FOOTER */
     footer{
-      background:#111;
-      color:#ccc;
-      padding:30px 20px;
-    }
-    footer .footer-grid{
-      max-width:1200px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:20px;
-    }
-    footer h4{color:#fff}
+  background:#111;
+  color:#ccc;
+  padding:40px 20px;
+}
 
-    @media(max-width:600px){
-      .banner h2{font-size:26px}
-    }
+.footer-contenido{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
 
+.footer-col{
+  flex:1;
+  min-width:200px;
+}
+
+.footer-col h4{
+  color:white;
+  margin-bottom:15px;
+}
 
 .ver-carrito{
   position:fixed;
