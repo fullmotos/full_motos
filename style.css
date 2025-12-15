@@ -172,3 +172,14 @@ th, td{
   width:100%;
   border-radius:10px;
 }
+
+.producto button{
+  margin:10px;
+  padding:10px;
+  background:#d90429;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  width:calc(100% - 20px);
+}
