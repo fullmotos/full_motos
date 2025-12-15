@@ -1,136 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repuestos de Moto | Colombia</title>
-  <link rel="stylesheet" href="style.css">
-<link rel="Icon" href="fullmotos.jpg">
-</head>
-<body>
 
-<header>
-  <h1>Repuestos Moto</h1>
-  <nav>
-    <a href="#productos">Repuestos</a>
-    <a href="#envios">Envíos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-
-<div class="banner">
-  <h2>Todo para tu moto</h2>
-  <p>Repuestos de moto a nivel nacional</p>
-</div>
-
-<div class="buscador">
-  <input type="text" id="buscar" placeholder="Buscar repuesto..." onkeyup="filtrarProductos()" />
-</div>
 
 <section>
-  <h3>Marcas populares</h3>
-  <div class="marcas">
-    <div class="marca">Pulsar</div>
-    <div class="marca">AKT</div>
-    <div class="marca">Yamaha</div>
-    <div class="marca">Suzuki</div>
-    <div class="marca">Honda</div>
-  </div>
+<h3>Marcas populares</h3>
+<div class="marcas">
+<div class="marca">Pulsar</div>
+<div class="marca">AKT</div>
+<div class="marca">Yamaha</div>
+<div class="marca">Suzuki</div>
+<div class="marca">Honda</div>
+</div>
 </section>
+
 
 <section id="productos">
-  <h3>Repuestos populares</h3>
-  <div class="productos" id="listaProductos">
+<h3>Repuestos populares</h3>
+<div class="productos" id="listaProductos">
 
-    <div class="producto" data-nombre="freno disco pulsar">
-      <img src="https://images.unsplash.com/photo-1621961458348-59b9c07f8f80" />
-      <div class="info">
-        <h4>Freno de disco Pulsar</h4>
-        <div class="precio">$57.600</div>
-      </div>
-      <button class="btn" onclick="comprar('Freno de disco Pulsar','$57.600')">Comprar por WhatsApp</button>
-    </div>
 
-    <div class="producto" data-nombre="kit plastico pulsar">
-      <img src="https://images.unsplash.com/photo-1558981001-5864b3258c59" />
-      <div class="info">
-        <h4>Kit plástico Pulsar</h4>
-        <div class="precio">$320.000</div>
-      </div>
-      <button class="btn" onclick="comprar('Kit plástico Pulsar','$320.000')">Comprar por WhatsApp</button>
-    </div>
+<div class="producto" data-nombre="Freno de disco Pulsar" data-precio="57600">
+<img src="img/freno.jpg" alt="Freno de disco">
+<div class="info">
+<h4>Freno de disco Pulsar</h4>
+<p class="precio">$57.600</p>
+</div>
+<button onclick="agregarAlCarrito('Freno de disco Pulsar',57600)">Agregar al carrito</button>
+</div>
 
-    <div class="producto" data-nombre="pastillas freno">
-      <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6" />
-      <div class="info">
-        <h4>Pastillas de freno</h4>
-        <div class="precio">$11.600</div>
-      </div>
-      <button class="btn" onclick="comprar('Pastillas de freno','$11.600')">Comprar por WhatsApp</button>
-    </div>
 
-    <div class="producto" data-nombre="filtro aceite">
-      <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72" />
-      <div class="info">
-        <h4>Filtro de aceite</h4>
-        <div class="precio">$4.900</div>
-      </div>
-      <button class="btn" onclick="comprar('Filtro de aceite','$4.900')">Comprar por WhatsApp</button>
-    </div>
+<div class="producto" data-nombre="Kit plástico Pulsar" data-precio="320000">
+<img src="img/kit.jpg" alt="Kit plástico">
+<div class="info">
+<h4>Kit plástico Pulsar</h4>
+<p class="precio">$320.000</p>
+</div>
+<button onclick="agregarAlCarrito('Kit plástico Pulsar',320000)">Agregar al carrito</button>
+</div>
 
-  </div>
+
+<div class="producto" data-nombre="Pastillas de freno" data-precio="11600">
+<img src="img/pastillas.jpg" alt="Pastillas de freno">
+<div class="info">
+<h4>Pastillas de freno</h4>
+<p class="precio">$11.600</p>
+</div>
+<button onclick="agregarAlCarrito('Pastillas de freno',11600)">Agregar al carrito</button>
+</div>
+
+
+<div class="producto" data-nombre="Filtro de aceite" data-precio="4900">
+<img src="img/filtro.jpg" alt="Filtro de aceite">
+<div class="info">
+<h4>Filtro de aceite</h4>
+<p class="precio">$4.900</p>
+</div>
+<button onclick="agregarAlCarrito('Filtro de aceite',4900)">Agregar al carrito</button>
+</div>
+
+
+</div>
 </section>
+
+
+<section id="carrito">
+<h3>🛒 Carrito de compras</h3>
+<ul id="listaCarrito"></ul>
+<p><strong>Total:</strong> $<span id="total">0</span></p>
+<button onclick="finalizarCompra()">Finalizar compra por WhatsApp</button>
+</section>
+
 
 <section id="envios">
-  <h3>Envíos</h3>
-  <div class="envios">
-    <div class="envio">
-      <h4>🚚 Interrapidísimo</h4>
-      <p>Envíos a todo Colombia</p>
-    </div>
-    <div class="envio">
-      <h4>🏍️ Domicilio</h4>
-      <p>Cúcuta y área metropolitana</p>
-    </div>
-  </div>
+<h3>Envíos</h3>
+<div class="envios">
+<div class="envio">🚚 Interrapidísimo a todo Colombia</div>
+<div class="envio">🏍️ Domicilio en Cúcuta</div>
+</div>
 </section>
 
+
 <footer id="contacto">
-  <div class="footer-grid">
-    <div>
-      <h4>Repuestos Moto</h4>
-      <p>Venta de repuestos de moto a nivel nacional.</p>
-    </div>
-    <div>
-      <h4>Contacto</h4>
-      <p>WhatsApp: +57 300 000 0000</p>
-      <p>Cúcuta - Colombia</p>
-    </div>
-    <div>
-      <h4>Redes</h4>
-      <p>Facebook</p>
-      <p>Instagram</p>
-    </div>
-  </div>
+<p>📱 WhatsApp: +57 300 000 0000</p>
+<p>📍 Cúcuta - Colombia</p>
+<p>Facebook | Instagram</p>
 </footer>
 
-<script>
-  function comprar(producto,precio){
-    const telefono = '573000000000';
-    const mensaje = `Hola, estoy interesado en el producto: ${producto} con precio ${precio}`;
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url,'_blank');
-  }
 
-  function filtrarProductos(){
-    const texto = document.getElementById('buscar').value.toLowerCase();
-    const productos = document.querySelectorAll('.producto');
-    productos.forEach(p=>{
-      const nombre = p.dataset.nombre;
-      p.style.display = nombre.includes(texto) ? 'flex' : 'none';
-    });
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
