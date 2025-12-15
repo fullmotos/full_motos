@@ -52,3 +52,62 @@ body{
 .precio{
   font-weight:bold;
 }
+
+
+.producto-card{
+  text-align:center;
+}
+
+.producto-img{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.producto-img img{
+  width:100%;
+  display:block;
+  transition:opacity 0.4s ease;
+}
+
+.img-atras{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+
+.producto-img:hover .img-atras{
+  opacity:1;
+}
+
+.producto-img:hover .img-frente{
+  opacity:0;
+}
+
+.producto-card h3{
+  font-size:15px;
+  margin:12px 0 5px;
+}
+
+.descripcion{
+  font-size:13px;
+  color:#555;
+  margin-bottom:10px;
+}
+
+.precio{
+  margin-bottom:12px;
+}
+
+.precio-anterior{
+  text-decoration:line-through;
+  color:#999;
+  margin-right:6px;
+}
+
+.precio-actual{
+  color:#e10600;
+  font-weight:bold;
+  font-size:16px;
+}
