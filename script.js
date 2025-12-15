@@ -1,32 +1,44 @@
-let carrito = [];
-let total = 0;
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function agregarAlCarrito(nombre, precio){
   carrito.push({ nombre, precio });
-  total += precio;
-  renderCarrito();
+  guardarCarrito();
+  alert("Producto agregado al carrito");
 }
 
-function renderCarrito(){
-  const lista = document.getElementById("listaCarrito");
+function guardarCarrito(){
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function cargarCarrito(){
+  const tabla = document.getElementById("tablaCarrito");
   const totalSpan = document.getElementById("total");
 
-  lista.innerHTML = "";
+  if(!tabla) return;
+
+  tabla.innerHTML = "";
+  let total = 0;
 
   carrito.forEach((item, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `${item.nombre} - $${item.precio.toLocaleString()} 
-      <button onclick="eliminarProducto(${index})">❌</button>`;
-    lista.appendChild(li);
+    total += item.precio;
+    tabla.innerHTML += `
+      <tr>
+        <td>${item.nombre}</td>
+        <td>$${item.precio.toLocaleString()}</td>
+        <td>
+          <button onclick="eliminarProducto(${index})">❌</button>
+        </td>
+      </tr>
+    `;
   });
 
   totalSpan.textContent = total.toLocaleString();
 }
 
 function eliminarProducto(index){
-  total -= carrito[index].precio;
   carrito.splice(index,1);
-  renderCarrito();
+  guardarCarrito();
+  cargarCarrito();
 }
 
 function finalizarCompra(){
@@ -36,16 +48,20 @@ function finalizarCompra(){
   }
 
   let mensaje = "🛒 *Pedido de repuestos*%0A%0A";
+  let total = 0;
 
   carrito.forEach(item => {
     mensaje += `• ${item.nombre} - $${item.precio.toLocaleString()}%0A`;
+    total += item.precio;
   });
 
-  mensaje += `%0A*Total:* $${total.toLocaleString()}%0A`;
+  mensaje += `%0A*Total:* $${total.toLocaleString()}`;
   mensaje += "%0A📍 Envío: Interrapidísimo / Domicilio Cúcuta";
 
-  const telefono = "573228275757"; // TU WHATSAPP
-  const url = `https://wa.me/${telefono}?text=${mensaje}`;
+  const telefono = "573228275757";
+  window.open(`https://wa.me/${telefono}?text=${mensaje}`, "_blank");
 
-  window.open(url, "_blank");
+  localStorage.removeItem("carrito");
 }
+
+document.addEventListener("DOMContentLoaded", cargarCarrito);
