@@ -102,16 +102,11 @@
     }
 
 
-    /* FOOTER */
-    footer{
+   /* FOOTER */
+footer{
   background:#111;
   color:#ccc;
   padding:40px 20px;
-}
-
-footer a {
-  text-decoration: none;
-  color: var(--negro);
 }
 
 .footer-contenido{
@@ -133,8 +128,18 @@ footer a {
   margin-bottom:15px;
 }
 
+footer a{
+  text-decoration:none;
+  color:#ccc;
+}
+
+footer a:hover{
+  color:#fff;
+}
+
+/* Responsive */
 @media (max-width: 768px){
-  footer{
+  .footer-contenido{
     flex-direction:column;
     text-align:center;
   }
