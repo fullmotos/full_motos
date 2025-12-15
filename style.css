@@ -108,6 +108,7 @@
   color:#ccc;
   padding:40px 20px;
 }
+
 footer a {
   text-decoration: none;
   color: var(--negro);
@@ -131,6 +132,15 @@ footer a {
   color:white;
   margin-bottom:15px;
 }
+
+@media (max-width: 768px){
+  footer{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
 
 .ver-carrito{
   position:fixed;
