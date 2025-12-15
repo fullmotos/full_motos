@@ -121,25 +121,43 @@
     }
 
 
-#carrito{
-  max-width:600px;
+.ver-carrito{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#d90429;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.carrito-page{
+  max-width:900px;
   margin:40px auto;
   padding:20px;
-  border:2px solid var(--rojo);
-  border-radius:10px;
 }
 
-#carrito ul{
-  list-style:none;
-  padding:0;
+table{
+  width:100%;
+  border-collapse:collapse;
 }
 
-#carrito li{
+th, td{
+  padding:15px;
+  border-bottom:1px solid #ddd;
+  text-align:left;
+}
+
+.resumen{
+  margin-top:30px;
   display:flex;
   justify-content:space-between;
-  margin-bottom:10px;
+  align-items:center;
 }
 
-#carrito button{
-  margin-top:10px;
+.resumen button{
+  padding:15px 25px;
+  font-size:16px;
 }
