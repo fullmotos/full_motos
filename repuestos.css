@@ -144,3 +144,45 @@ nav a:hover{
   gap:20px;
   padding:40px 20px;
 }
+
+
+.ver-carrito{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#d90429;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.carrito-page{
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:15px;
+  border-bottom:1px solid #ddd;
+  text-align:left;
+}
+
+.resumen{
+  margin-top:30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.resumen button{
+  padding:15px 25px;
+  font-size:16px;
+}
