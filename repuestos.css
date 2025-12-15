@@ -31,6 +31,20 @@ nav a:hover{
   background:#ffffff;
 }
 
+.titulo-repuestos{
+  background:white;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.titulo-repuestos h2{
+  font-size:40px;
+  color:#000;
+  margin:0;
+  font-weight:bold;
+}
+
+
 .grid-repuestos{
   max-width:1200px;
   margin:auto;
