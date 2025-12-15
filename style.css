@@ -119,3 +119,27 @@
     @media(max-width:600px){
       .banner h2{font-size:26px}
     }
+
+
+#carrito{
+  max-width:600px;
+  margin:40px auto;
+  padding:20px;
+  border:2px solid var(--rojo);
+  border-radius:10px;
+}
+
+#carrito ul{
+  list-style:none;
+  padding:0;
+}
+
+#carrito li{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+#carrito button{
+  margin-top:10px;
+}
