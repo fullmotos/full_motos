@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+</section>
+
+
+<section class="buscador">
+<input type="text" id="buscar" placeholder="Buscar repuesto..." onkeyup="filtrarProductos()" />
+</section>
+
+
+<section>
+<h3>Marcas populares</h3>
+<div class="marcas">
+<div class="marca">Pulsar</div>
+<div class="marca">AKT</div>
+<div class="marca">Yamaha</div>
+<div class="marca">Suzuki</div>
+<div class="marca">Honda</div>
+</div>
+</section>
+
+
+<section id="productos">
+<h3>Repuestos populares</h3>
+<div class="productos" id="listaProductos">
+
+
+<div class="producto" data-nombre="freno disco pulsar">
+<img src="img/freno.jpg" alt="Freno de disco">
+<div class="info">
+<h4>Freno de disco Pulsar</h4>
+<p class="precio">$57.600</p>
+</div>
+<button onclick="comprar('Freno de disco Pulsar','$57.600')">Comprar por WhatsApp</button>
+</div>
+
+
+<div class="producto" data-nombre="kit plastico pulsar">
+<img src="img/kit.jpg" alt="Kit plástico">
+<div class="info">
+<h4>Kit plástico Pulsar</h4>
+<p class="precio">$320.000</p>
+</div>
+<button onclick="comprar('Kit plástico Pulsar','$320.000')">Comprar por WhatsApp</button>
+</div>
+
+
+<div class="producto" data-nombre="pastillas freno">
+<img src="img/pastillas.jpg" alt="Pastillas de freno">
+<div class="info">
+<h4>Pastillas de freno</h4>
+<p class="precio">$11.600</p>
+</div>
+<button onclick="comprar('Pastillas de freno','$11.600')">Comprar por WhatsApp</button>
+</div>
+
+
+<div class="producto" data-nombre="filtro aceite">
+<img src="img/filtro.jpg" alt="Filtro de aceite">
+<div class="info">
+<h4>Filtro de aceite</h4>
+<p class="precio">$4.900</p>
+</div>
+<button onclick="comprar('Filtro de aceite','$4.900')">Comprar por WhatsApp</button>
+</div>
+
+
+</div>
+</section>
+
+
+<section id="envios">
+<h3>Envíos</h3>
+<div class="envios">
+<div class="envio">🚚 Interrapidísimo a todo Colombia</div>
+<div class="envio">🏍️ Domicilio en Cúcuta</div>
+</div>
+</section>
+
+
+<footer id="contacto">
+<p>📱 WhatsApp: +57 300 000 0000</p>
+<p>📍 Cúcuta - Colombia</p>
+<p>Facebook | Instagram</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
