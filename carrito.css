@@ -5,6 +5,13 @@ body {
 }
 
 /* HEADER */
+
+.titulo {
+    background: white;
+    text-align: center;
+    padding: 40px;
+}
+
 .nav {
     background: black;
     color: white;
