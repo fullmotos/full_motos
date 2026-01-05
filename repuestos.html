@@ -59,18 +59,34 @@
 </section>
 
 <script>
-function agregarAlCarrito(nombre, precio) {
+function agregarAlCarrito(nombre, precio, imagen) {
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    carrito.push({
-        nombre: nombre,
-        precio: precio
-    });
+    let producto = carrito.find(p => p.nombre === nombre);
+
+    if (producto) {
+        producto.cantidad++;
+    } else {
+        carrito.push({
+            nombre,
+            precio,
+            imagen,
+            cantidad: 1
+        });
+    }
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
-
+    actualizarContador();
     alert("Producto agregado al carrito 🛒");
 }
+
+function actualizarContador(){
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let total = carrito.reduce((sum, p) => sum + p.cantidad, 0);
+    document.getElementById("contador-carrito").innerText = total;
+}
+
+window.onload = actualizarContador;
 </script>
 
 </body>
