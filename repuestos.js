@@ -14,3 +14,32 @@ function filtrarCategoria(categoria) {
         }
     });
 }
+
+
+function cambiarPrecio(select) {
+  const precio = select.value;
+  const card = select.closest('.producto-card');
+  const precioSpan = card.querySelector('.precio-actual');
+
+  precioSpan.textContent = `$${Number(precio).toLocaleString()}`;
+}
+
+function agregarAlCarrito(nombre, boton) {
+  const card = boton.closest('.producto-card');
+  const select = card.querySelector('.marca-select');
+  const precio = select.value;
+  const marca = select.options[select.selectedIndex].dataset.marca;
+
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  carrito.push({
+    nombre,
+    marca,
+    precio: Number(precio),
+    cantidad: 1
+  });
+
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  alert(`Agregado al carrito:\n${nombre}\nMarca: ${marca}`);
+}
