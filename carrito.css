@@ -64,3 +64,47 @@ body {
 #whatsapp:hover {
     background: #1ebe5d;
 }
+
+
+.item-carrito{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.item-carrito img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.info{
+    flex: 1;
+}
+
+.cantidad{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cantidad button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.eliminar{
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
