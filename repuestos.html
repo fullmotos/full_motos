@@ -1,78 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Repuestos | Full Motos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="repuestos.css">
+    <meta charset="UTF-8">
+    <title>Repuestos | Full Motos</title>
+    <link rel="stylesheet" href="repuestos.css">
 </head>
 <body>
-<header>
-      
-  <h3>Repuestos</h3>
-  <nav>
-    <a href="index.html">inicio</a>
-    <a href="#envios">Envíos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+
+<header class="nav">
+    <h1>Full Motos</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="repuestos.html">Repuestos</a>
+        <a href="carrito.html">Carrito 🛒</a>
+    </nav>
 </header>
 
-  
-<section class="titulo-repuestos">
-  <h2>Repuestos</h2>
+<section class="titulo">
+    <h2>Repuestos</h2>
 </section>
 
-  <br>
-  
-<section class="productos-grid">
+<section class="productos">
 
-  <div class="producto">
-    <img src="img/freno.jpg">
-    <h3>Freno de disco Pulsar</h3>
-    <p>Repuesto compatible con Pulsar NS / RS.</p>
-    <p>
-      <span class="precio-antes">$72.000</span>
-      <span class="precio">$57.600</span>
-    </p>
-    <button>Agregar al carrito</button>
-  </div>
+    <!-- PRODUCTO -->
+    <div class="producto">
+        <img src="img/freno.jpg" alt="Freno de disco Pulsar">
+        <h3>Freno de disco Pulsar</h3>
+        <p>Compatible con Pulsar NS / RS.</p>
 
-  <div class="producto">
-    <img src="img/freno.jpg">
-    <h3>Freno de disco Pulsar</h3>
-    <p>Repuesto compatible con Pulsar NS / RS.</p>
-    <p>
-      <span class="precio-antes">$72.000</span>
-      <span class="precio">$57.600</span>
-    </p>
-    
-<button onclick="agregarAlCarrito('Freno de disco Pulsar',320.000)">
-  Agregar al carrito
-</button>
-  </div>
+        <p class="precio">
+            <span class="antes">$72.000</span>
+            <span class="ahora">$57.600</span>
+        </p>
 
-  <!-- MÁS productos aquí -->
+        <button onclick="agregarAlCarrito('Freno de disco Pulsar', 57600)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <!-- PRODUCTO -->
+    <div class="producto">
+        <img src="img/pastillas.jpg" alt="Pastillas de freno">
+        <h3>Pastillas de freno</h3>
+        <p>Alta durabilidad.</p>
+
+        <p class="precio">
+            <span class="ahora">$11.600</span>
+        </p>
+
+        <button onclick="agregarAlCarrito('Pastillas de freno', 11600)">
+            Agregar al carrito
+        </button>
+    </div>
+
+    <!-- AGREGA MÁS PRODUCTOS COPIANDO EL BLOQUE -->
 
 </section>
-</section>
-
-  <div>
-<a href="carrito.html" class="ver-carrito">
-  🛒 Ver carrito
-</a>
-</div>
-
 
 <script>
-let carrito = [];
+function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-function agregarAlCarrito(nombre, precio){
-  carrito.push({ nombre, precio });
+    carrito.push({
+        nombre: nombre,
+        precio: precio
+    });
 
-  alert(nombre + " agregado al carrito");
-  console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    alert("Producto agregado al carrito 🛒");
 }
 </script>
-  
+
 </body>
 </html>
