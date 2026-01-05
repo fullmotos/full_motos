@@ -1,0 +1,24 @@
+.top-contacto {
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.top-contacto span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* móvil */
+@media (max-width: 768px) {
+    .top-contacto {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+}
