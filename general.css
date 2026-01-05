@@ -22,3 +22,99 @@
         font-size: 13px;
     }
 }
+
+
+
+/* FOOTER MOTO */
+.footer-moto {
+  position: relative;
+  background: #000;
+  color: #fff;
+  padding: 60px 20px 30px;
+  overflow: hidden;
+}
+
+/* ICONOS DE FONDO */
+.footer-bg-icons {
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* CONTENIDO */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-col p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #e10600;
+}
+
+/* REDES */
+.footer-redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-redes a:hover {
+  background: #e10600;
+}
+
+/* COPY */
+.footer-copy {
+  position: relative;
+  z-index: 2;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .footer-moto {
+    text-align: center;
+  }
+  .footer-redes {
+    justify-content: center;
+  }
+}
