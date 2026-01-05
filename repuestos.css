@@ -84,6 +84,18 @@ button:hover {
 
 
 
+
+function agregarMarca(nombre, marca, precio) {
+  alert('CLICK OK: ' + nombre + ' ' + marca + ' $' + precio);
+}
+
+
+
+
+
+
+
+
 .carrito-flotante {
     position: fixed;
     bottom: 25px;
