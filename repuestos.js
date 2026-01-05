@@ -27,7 +27,7 @@ function cambiarPrecio(select) {
 function agregarAlCarrito(nombre, boton) {
   const card = boton.closest('.producto-card');
   const select = card.querySelector('.marca-select');
-  const precio: { valor: 35000, marca: "choho" };
+  const precio: { valor: 35000, marca: "CHOHO" };
   const marca = select.options[select.selectedIndex].dataset.marca;
 
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
