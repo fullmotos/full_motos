@@ -28,6 +28,7 @@ body {
 .titulo h2 {
     font-size: 40px;
     margin: 0;
+    align-items: center;
 }
 
 .productos {
