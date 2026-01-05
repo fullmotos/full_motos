@@ -47,32 +47,7 @@
 
 
 
-<!-- PRUEBA DE SELCCION -->
- <div class="producto-card">
-  <img src="img/repuestos/freno/frente.jpg" alt="Freno de disco Pulsar">
 
-  <h3>Freno de disco Pulsar</h3>
-  <p>Compatible con Pulsar NS / RS</p>
-
-  <!-- Selector de marca -->
-  <select class="marca-select" onchange="cambiarPrecio(this)">
-    <option value="60000" data-marca="Original">Original (Bajaj)</option>
-    <option value="35000" data-marca="CHOHO">CHOHO</option>
-    <option value="15000" data-marca="SUKIPART">Suki part</option>
-  </select>
-
-  <!-- Precio -->
-  <p class="precio">
-    <span class="precio-actual">$72.000</span>
-  </p>
-
-  <button onclick="agregarAlCarrito(
-    'Freno de disco Pulsar',
-    this
-  )">
-    Agregar al carrito
-  </button>
-</div>   
 
 <section class="productos">
 
@@ -85,6 +60,23 @@
         </div>
         <h3>Freno de disco Pulsar</h3>
         <p>Compatible con Pulsar NS / RS.</p>
+
+<button onclick="agregarAlCarrito(
+      'Freno de disco Pulsar',
+      'Genérico A',
+      35000
+    )">
+      choho – $30.000
+    </button>
+
+    <button onclick="agregarAlCarrito(
+      'Freno de disco Pulsar',
+      'Genérico B',
+      15000
+    )">
+      motolandia – $15.000
+    </button>
+       
 
         <p class="precio">
             <span class="antes">$72.000</span>
