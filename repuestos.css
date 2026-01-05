@@ -244,3 +244,11 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+
+.btn-carrito {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 30px;
+}
