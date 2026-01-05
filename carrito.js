@@ -57,3 +57,14 @@ function actualizarWhatsApp(){
 }
 
 renderCarrito();
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+function actualizarContadorCarrito() {
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  let total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+  document.getElementById('contador-carrito').textContent = total;
+}
+
+actualizarContadorCarrito();
