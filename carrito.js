@@ -59,3 +59,9 @@ function actualizarWhatsApp(){
 renderCarrito();
 
 
+itemDiv.innerHTML = `
+  <strong>${item.nombre}</strong><br>
+  Marca: ${item.marca}<br>
+  Precio: $${item.precio.toLocaleString()}<br>
+  Cantidad: ${item.cantidad}
+`;
