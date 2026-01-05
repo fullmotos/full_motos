@@ -252,3 +252,32 @@ button:hover {
     font-size: 16px;
     border-radius: 30px;
 }
+
+@media (max-width: 600px) {
+    .subcategorias {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .subcategorias button {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrito-flotante {
+        bottom: 15px;
+        right: 15px;
+        width: 55px;
+        height: 55px;
+        font-size: 24px;
+    }
+}
