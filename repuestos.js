@@ -15,23 +15,25 @@ function filtrarCategoria(categoria) {
     });
 }
 
-< !---------------------------------------------------------------------------------------- >
 
 
-    function agregarAlCarrito(nombre, marca, precio) {
+
+
+
+function agregarMarca(nombre, marca, precio) {
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-  const existente = carrito.find(
+  const existe = carrito.find(
     item => item.nombre === nombre && item.marca === marca
   );
 
-  if (existente) {
-    existente.cantidad += 1;
+  if (existe) {
+    existe.cantidad += 1;
   } else {
     carrito.push({
-      nombre,
-      marca,
-      precio,
+      nombre: nombre,
+      marca: marca,
+      precio: precio,
       cantidad: 1
     });
   }
