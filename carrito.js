@@ -65,3 +65,6 @@ itemDiv.innerHTML = `
   Precio: $${item.precio.toLocaleString()}<br>
   Cantidad: ${item.cantidad}
 `;
+
+localStorage.removeItem('carrito');
+location.reload();
