@@ -1,102 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FULL MOTOS - Inicio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Full Motos | Repuestos para Moto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="general.css">
 <link rel="Icon" href="fullmotos.jpeg">
+</head>
+<body>
 
-  
-  <!-- INICIO -->
-  <body>
-    <header>
-      
-  <h1>Repuestos Moto</h1>
-  <nav>
-    <a href="repuestos.html">Repuestos</a>
-    <a href="#envios">Envíos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-    
-<section class="banner-inicio">
-  <img src="baner.jpeg" alt="Repuestos de moto">
-</section>
-    
-<section>
-<h3>Marcas populares</h3>
-<div class="marcas">
-<div class="marca">Pulsar</div>
-<div class="marca">AKT</div>
-<div class="marca">Yamaha</div>
-<div class="marca">Suzuki</div>
-<div class="marca">Honda</div>
-</div>
-</section>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Full Motos</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="repuestos.html">Repuestos</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
 
+  <!-- BANNER -->
+  <section class="banner">
+    <img src="banner.jpeg" alt="Repuestos para moto">
+  </section>
 
-<section id="productos">
-<h3>Repuestos populares</h3>
-<div class="productos" id="listaProductos">
+  <!-- MARCAS -->
+  <section class="marcas">
+    <h2>Trabajamos con las mejores marcas</h2>
 
+    <div class="marcas-grid">
+      <img src="img/marcas/bajaj.png" alt="Bajaj">
+      <img src="img/marcas/yamaha.png" alt="Yamaha">
+      <img src="img/marcas/honda.png" alt="Honda">
+      <img src="img/marcas/suzuki.png" alt="Suzuki">
+      <img src="img/marcas/akt.png" alt="AKT">
+      <img src="img/marcas/tvs.png" alt="TVS">
+    </div>
+  </section>
 
-<div class="producto" data-nombre="Freno de disco Pulsar" data-precio="57600">
-<img src="img/freno.jpg" alt="Freno de disco">
-<div class="info">
-<h4>Freno de disco Pulsar</h4>
-<p class="precio">$57.600</p>
-</div>
-<button onclick="agregarAlCarrito('Freno de disco Pulsar',57600)">
-  Agregar al carrito
-</button>
-</div>
-
-
-<div class="producto" data-nombre="Kit plástico Pulsar" data-precio="320.000">
-<img src="img/kit.jpg" alt="Kit plástico">
-<div class="info">
-<h4>Kit plástico Pulsar</h4>
-<p class="precio">$320.000</p>
-</div>
-<button onclick="agregarAlCarrito('Freno de disco Pulsar',320.000)">
-  Agregar al carrito
-</button>
-</div>
-
-
-<div class="producto" data-nombre="Pastillas de freno" data-precio="11600">
-<img src="img/pastillas.jpg" alt="Pastillas de freno">
-<div class="info">
-<h4>Pastillas de freno</h4>
-<p class="precio">$11.600</p>
-</div>
-<button onclick="agregarAlCarrito('Freno de disco Pulsar',320.000)">
-  Agregar al carrito
-</button>
-</div>
-
-
-<div class="producto" data-nombre="Filtro de aceite" data-precio="4900">
-<img src="img/filtro.jpg" alt="Filtro de aceite">
-<div class="info">
-<h4>Filtro de aceite</h4>
-<p class="precio">$4.900</p>
-</div>
-<button onclick="agregarAlCarrito('Freno de disco Pulsar',320.000)">
-  Agregar al carrito
-</button>
-</div>
-
-<div>
-<a href="carrito.html" class="ver-carrito">
-  🛒 Ver carrito
-</a>
-</div>
-
-
-<section id="envios">
+  <section id="envios">
 <h3>Envíos</h3>
 <div class="envios">
 <div class="envio">🚚 Interrapidísimo a todo Colombia</div>
@@ -104,8 +49,8 @@
 </div>
 </section>
 
-
- <footer class="footer-moto">
+  <!-- FOOTER -->
+  <footer class="footer-moto">
   <div class="footer-bg-icons"></div>
 
   <div class="footer-container">
@@ -145,9 +90,6 @@
     © 2026 Full Motos — Todos los derechos reservados
   </div>
 </footer>
-
-
-
 <script src="script.js"></script>
 </body>
 </html>
