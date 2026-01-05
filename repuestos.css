@@ -301,6 +301,7 @@ function agregarMarca(nombre, marca, precio) {
   gap: 10px;
   flex-wrap: wrap;
   margin: 10px 0;
+  align-items: center;
 }
 
 .marcas-botones button {
@@ -311,6 +312,7 @@ function agregarMarca(nombre, marca, precio) {
   border-radius: 20px;
   font-size: 13px;
   cursor: pointer;
+    align-items: center;
 }
 
 .marcas-botones button:hover {
