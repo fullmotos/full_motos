@@ -102,48 +102,7 @@
     }
 
 
-   /* FOOTER */
-footer{
-  background:#111;
-  color:#ccc;
-  padding:40px 20px;
-}
-
-.footer-contenido{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  flex-wrap:wrap;
-}
-
-.footer-col{
-  flex:1;
-  min-width:200px;
-}
-
-.footer-col h4{
-  color:white;
-  margin-bottom:15px;
-}
-
-footer a{
-  text-decoration:none;
-  color:#ccc;
-}
-
-footer a:hover{
-  color:#fff;
-}
-
-/* Responsive */
-@media (max-width: 768px){
-  .footer-contenido{
-    flex-direction:column;
-    text-align:center;
-  }
-}
+  
 
 
 
