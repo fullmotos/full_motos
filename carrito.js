@@ -4,7 +4,7 @@ let total = 0;
 
 function renderCarrito(){
     lista.innerHTML = "";
-    total = 0;
+    total = 0.00;
 
     carrito.forEach((p, index) => {
         total += p.precio * p.cantidad;
