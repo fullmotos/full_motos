@@ -58,6 +58,22 @@ function actualizarWhatsApp(){
 
 renderCarrito();
 
+function agregarMarca(nombre, marca, precio, imagen) {
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  carrito.push({
+    nombre: nombre,
+    marca: marca,
+    precio: Number(precio),
+    imagen: imagen,
+    cantidad: 1
+  });
+
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+
+
 
 const imgSrc = item.imagen ? item.imagen : 'img/no-image.png';
 
