@@ -60,6 +60,7 @@ renderCarrito();
 
 
 itemDiv.innerHTML = `
+  <img src="${p.imagen}">
   <strong>${item.nombre}</strong><br>
   Marca: ${item.marca}<br>
   Precio: $${item.precio.toLocaleString()}<br>
