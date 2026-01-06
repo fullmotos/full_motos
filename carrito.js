@@ -59,12 +59,16 @@ function actualizarWhatsApp(){
 renderCarrito();
 
 
+const imgSrc = item.imagen ? item.imagen : 'img/no-image.png';
+
 itemDiv.innerHTML = `
-  <img src="${p.imagen}">
-  <strong>${item.nombre}</strong><br>
-  Marca: ${item.marca}<br>
-  Precio: $${item.precio.toLocaleString()}<br>
-  Cantidad: ${item.cantidad}
+  <img src="${imgSrc}" class="img-carrito">
+  <div>
+    <strong>${item.nombre}</strong><br>
+    Marca: ${item.marca}<br>
+    Precio: $${item.precio.toLocaleString()}<br>
+    Cantidad: ${item.cantidad}
+  </div>
 `;
 
 localStorage.removeItem('carrito');
