@@ -316,7 +316,7 @@ function agregarMarca(nombre, marca, precio) {
 }
 
 .subcategorias button {
-    background: #f4f1bb;
+    background: #f1f1f1;
     border: none;
     padding: 10px 18px;
     border-radius: 20px;
@@ -327,12 +327,12 @@ function agregarMarca(nombre, marca, precio) {
 
 .subcategorias button:hover {
     background: #e60023;
-    color: black;
+    color: white;
 }
 
 .subcategorias .active {
     background: #e60023;
-    color: white;
+    color: black;
 }
 
 
