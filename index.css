@@ -86,3 +86,67 @@
     font-size: 26px;
   }
 }
+
+/* SECCIONES */
+section {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.card {
+  min-width: 160px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card span {
+  color: red;
+  font-weight: bold;
+}
+
+/* CATEGORÍAS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.grid a {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* WHATSAPP */
+.btn-ws {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
