@@ -87,56 +87,54 @@
   }
 }
 
-/* SECCIONES */
-section {
-  padding: 20px;
+.beneficios {
+  background: linear-gradient(135deg, #2b0000, #000);
+  color: white;
+  padding: 25px;
 }
 
-h2 {
-  margin-bottom: 15px;
-}
-
-/* CARDS */
-.cards {
+/* BENEFICIOS SUPERIORES */
+.beneficios-top {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
-.card {
-  min-width: 160px;
-  background: #fff;
-  border-radius: 15px;
-  padding: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.beneficio {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card span {
-  color: red;
-  font-weight: bold;
-}
-
-/* CATEGORÍAS */
-.grid {
+/* GRID */
+.beneficios-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 15px;
 }
 
-.grid a {
-  background: #000;
-  color: #fff;
+.beneficio-card {
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
   padding: 15px;
   text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
+  transition: transform 0.3s;
 }
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+}
+
+.beneficio-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 
 /* WHATSAPP */
 .btn-ws {
