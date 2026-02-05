@@ -9,7 +9,7 @@ function mostrarCarrito() {
   let total = 0;
 
   carrito.forEach((producto, index) => {
-    total += producto.precio * producto.cantidad;
+    total += Number(item.precio) * item.cantidad;
 
     const item = document.createElement("div");
     item.className = "item-carrito";
