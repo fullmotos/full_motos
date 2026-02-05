@@ -1,91 +1,54 @@
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let lista = document.getElementById("lista");
-let total = 0;
+document.addEventListener("DOMContentLoaded", mostrarCarrito);
 
-function renderCarrito(){
-    lista.innerHTML = "";
-    total = 0.00;
+function mostrarCarrito() {
+  const contenedor = document.getElementById("lista-carrito");
+  const totalHTML = document.getElementById("total");
 
-    carrito.forEach((p, index) => {
-        total += p.precio * p.cantidad;
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  contenedor.innerHTML = "";
+  let total = 0;
 
-        let div = document.createElement("div");
-        div.className = "item-carrito";
+  carrito.forEach((producto, index) => {
+    total += producto.precio * producto.cantidad;
 
-        div.innerHTML = `
-          <img src="${p.imagen}">
-          <div class="info">
-            <h4>${p.nombre}</h4>
-            <p>$${p.precio}</p>
-            <div class="cantidad">
-              <button onclick="cambiarCantidad(${index}, -1)">−</button>
-              <span>${p.cantidad}</span>
-              <button onclick="cambiarCantidad(${index}, 1)">+</button>
-            </div>
-          </div>
-          <button class="eliminar" onclick="eliminarProducto(${index})">✕</button>
-        `;
+    const item = document.createElement("div");
+    item.className = "item-carrito";
 
-        lista.appendChild(div);
-    });
+    item.innerHTML = `
+      <img src="${producto.imagen || 'fullmotos.jpeg'}" alt="">
+      <div class="info">
+        <h4>${producto.nombre}</h4>
+        <p>$${producto.precio.toLocaleString()}</p>
+      </div>
+      <div class="cantidad">
+        <button onclick="cambiarCantidad(${index}, -1)">−</button>
+        <span>${producto.cantidad}</span>
+        <button onclick="cambiarCantidad(${index}, 1)">+</button>
+      </div>
+      <button class="eliminar" onclick="eliminar(${index})">✕</button>
+    `;
 
-    document.getElementById("total").innerText = "Total: $" + total;
-    actualizarWhatsApp();
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-
-function cambiarCantidad(i, cambio){
-    carrito[i].cantidad += cambio;
-    if (carrito[i].cantidad <= 0) carrito.splice(i,1);
-    renderCarrito();
-}
-
-function eliminarProducto(i){
-    carrito.splice(i,1);
-    renderCarrito();
-}
-
-function actualizarWhatsApp(){
-    let mensaje = "Hola, quiero comprar:%0A";
-    carrito.forEach(p => {
-        mensaje += `- ${p.nombre} x${p.cantidad} $${p.precio * p.cantidad}%0A`;
-    });
-    mensaje += `%0ATotal: $${total}`;
-
-    document.getElementById("whatsapp").href =
-      "https://wa.me/573228275757?text=" + mensaje;
-}
-
-renderCarrito();
-
-function agregarMarca(nombre, marca, precio, imagen) {
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-  carrito.push({
-    nombre: nombre,
-    marca: marca,
-    precio: Number(precio),
-    imagen: imagen,
-    cantidad: 1
+    contenedor.appendChild(item);
   });
 
-  localStorage.setItem('carrito', JSON.stringify(carrito));
+  totalHTML.textContent = `$${total.toLocaleString()}`;
 }
 
+function cambiarCantidad(index, cambio) {
+  let carrito = JSON.parse(localStorage.getItem("carrito"));
+  carrito[index].cantidad += cambio;
 
+  if (carrito[index].cantidad <= 0) {
+    carrito.splice(index, 1);
+  }
 
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito();
+}
 
-const imgSrc = item.imagen ? item.imagen : 'img/no-image.png';
-
-itemDiv.innerHTML = `
-  <img src="${imgSrc}" class="img-carrito">
-  <div>
-    <strong>${item.nombre}</strong><br>
-    Marca: ${item.marca}<br>
-    Precio: $${item.precio.toLocaleString()}<br>
-    Cantidad: ${item.cantidad}
-  </div>
-`;
-
-localStorage.removeItem('carrito');
-location.reload();
+function eliminar(index) {
+  let carrito = JSON.parse(localStorage.getItem("carrito"));
+  carrito.splice(index, 1);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito();
+}
