@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Carrito | Full Motos</title>
-    <link rel="stylesheet" href="carrito.css">
-    <link rel="stylesheet" href="general.css">
-    <link rel="Icon" href="fullmotos.jpeg">
+  <meta charset="UTF-8">
+  <title>Carrito | Full Motos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="carrito.css">
+
+  <!-- Icono -->
+  <link rel="icon" href="fullmotos.jpeg">
 </head>
 <body>
 
-<header class="nav">
+  <!-- HEADER -->
+  <header class="nav">
     <h1>Carrito</h1>
-    <a href="repuestos.html">← seguir comprando</a>
-</header>
-    
-    <section class="titulo">
+    <a href="repuestos.html">← Seguir comprando</a>
+  </header>
+
+  <!-- TÍTULO -->
+  <section class="titulo">
     <h2>¿Listo para comprar?</h2>
-</section>
+  </section>
 
-<section id="lista"></section>
+  <!-- LISTA DEL CARRITO -->
+  <section id="lista" class="lista-carrito">
+    <!-- Los productos se cargan aquí con JS -->
+  </section>
 
-<h2 id="total"></h2>
+  <!-- TOTAL -->
+  <h2 id="total" class="total-carrito">Total: $0</h2>
 
-<a id="whatsapp" target="_blank">Finalizar compra por WhatsApp</a>
+  <!-- WHATSAPP -->
+  <a id="whatsapp" class="btn-whatsapp" target="_blank">
+    Finalizar compra por WhatsApp
+  </a>
 
-<footer class="footer-moto">
-  <div class="footer-bg-icons"></div>
+  <!-- FOOTER -->
+  <footer class="footer-moto">
+    <div class="footer-bg-icons"></div>
 
-  <div class="footer-container">
+    <div class="footer-container">
 
-    <div class="footer-col">
-      <h3>Full Motos</h3>
-      <p>Venta de repuestos y accesorios para motos.<br>
-      Calidad, respaldo y envío seguro.</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contacto</h4>
-      <p>📍 Cúcuta, Colombia</p>
-      <p>📞 +57 322 827 5757</p>
-      <p>✉️ contacto@fullmotos.com</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Enlaces</h4>
-      <a href="index.html">Inicio</a>
-      <a href="repuestos.html">Repuestos</a>
-      <a href="carrito.html">Carrito</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Síguenos</h4>
-      <div class="footer-redes">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>
-        <a href="#">📸</a>
+      <div class="footer-col">
+        <h3>Full Motos</h3>
+        <p>
+          Venta de repuestos y accesorios para motos.<br>
+          Calidad, respaldo y envío seguro.
+        </p>
       </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Cúcuta, Colombia</p>
+        <p>📞 +57 322 827 5757</p>
+        <p>✉️ contacto@fullmotos.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a href="index.html">Inicio</a>
+        <a href="repuestos.html">Repuestos</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div class="footer-redes">
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+          <a href="#">🎵</a>
+        </div>
+      </div>
+
     </div>
 
-  </div>
+    <div class="footer-copy">
+      © 2026 Full Motos — Todos los derechos reservados
+    </div>
+  </footer>
 
-  <div class="footer-copy">
-    © 2026 Full Motos — Todos los derechos reservados
-  </div>
-</footer>
+  <!-- JS -->
+  <script src="carrito.js"></script>
 
-
-
-    
-<script src="carrito.js"></script>
 </body>
 </html>
