@@ -327,7 +327,7 @@ function agregarMarca(nombre, marca, precio) {
 
 .subcategorias button:hover {
     background: #e60023;
-    color: white;
+    color: black;
 }
 
 .subcategorias .active {
