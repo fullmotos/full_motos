@@ -29,7 +29,7 @@ function renderCarrito() {
         div.className = "item";
 
         div.innerHTML = `
-            <img src="${item.imagen}" alt="">
+            <img src="${item.imagen}">
             <div class="info">
                 <strong>${item.nombre}</strong>
                 <span>$${precio.toLocaleString("es-CO")}</span>
