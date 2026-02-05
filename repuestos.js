@@ -1,43 +1,31 @@
-function filtrarCategoria(categoria) {
-    const productos = document.querySelectorAll('.producto');
-    const botones = document.querySelectorAll('.subcategorias button');
+document.addEventListener("DOMContentLoaded", () => {
+  const botones = document.querySelectorAll(".btn-agregar");
 
-    botones.forEach(b => b.classList.remove('active'));
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      const producto = {
+        nombre: boton.dataset.nombre,
+        precio: Number(boton.dataset.precio),
+        imagen: boton.dataset.imagen,
+        cantidad: 1
+      };
 
-    event.target.classList.add('active');
-
-    productos.forEach(producto => {
-        if (categoria === 'todos' || producto.dataset.categoria === categoria) {
-            producto.style.display = 'block';
-        } else {
-            producto.style.display = 'none';
-        }
+      agregarAlCarrito(producto);
     });
-}
+  });
+});
 
+function agregarAlCarrito(producto) {
+  let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-
-
-
-
-function agregarMarca(nombre, marca, precio) {
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-  const existe = carrito.find(
-    item => item.nombre === nombre && item.marca === marca
-  );
+  const existe = carrito.find(p => p.nombre === producto.nombre);
 
   if (existe) {
-    existe.cantidad += 1;
+    existe.cantidad++;
   } else {
-    carrito.push({
-      nombre: nombre,
-      marca: marca,
-      precio: precio,
-      cantidad: 1
-    });
+    carrito.push(producto);
   }
 
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-  actualizarContadorCarrito();
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  alert("Producto agregado al carrito 🛒");
 }
